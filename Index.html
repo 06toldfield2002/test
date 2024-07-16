@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Starred Repositories</title>
+</head>
+<body>
+    <h1>Search GitHub Starred Repositories</h1>
+    <form action="search.php" method="post">
+        <label for="username">GitHub Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <h2>Previously Searched Users</h2>
+    <ul id="user-list">
+        <?php
+        list_users.php;
+        ?>
+       
+    </ul>
+</body>
+</html>
