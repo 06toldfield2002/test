@@ -1,0 +1,18 @@
+CREATE DATABASE github_repositories;
+
+USE githubrepositories;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  UNIQUE (username)
+);
+
+CREATE TABLE repositories (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  repo_name VARCHAR(255),
+  repo_url VARCHAR(255),
+  FOREIGN KEY (user_id) REFERENCES users(id)
+
+);
